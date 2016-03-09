@@ -49,13 +49,21 @@ body {
 }
 
 .pwrs-navbar .navbar-nav > .active > a,  .pwrs-navbar .navbar-nav > .open > a , 
-	.pwrs-navbar .navbar-nav > li > a:hover, .pwrs-navbar .navbar-nav > .active > a:hover {
+	.pwrs-navbar .navbar-nav > li > a:hover, .pwrs-navbar .navbar-nav > .active > a:hover,
+	.pwrs-navbar .navbar-nav > .open > a:hover {
 	background-color : @toolbar-bg-color-active;
 	color :  @toolbar-text-color;
 }
 
-.pwrs-navbar .navbar-nav > li > a:focus, .pwrs-navbar .navbar-nav > .active > a:focus ,
-	.pwrs-navbar .navbar-nav > .open > a:focus {
+.pwrs-navbar .navbar-nav > li > a:focus, .pwrs-navbar .navbar-nav > .active > a:focus
+	 {
+	background-color : @toolbar-bg-color;
+	color :  @toolbar-text-color;
+	border : dotted 1px @toolbar-bg-color-active;
+	height : @toolbar-height;
+}
+
+.pwrs-navbar .navbar-nav > .open > a:focus {
 	background-color : @toolbar-bg-color-active;
 	color :  @toolbar-text-color;
 	border : dotted 1px @toolbar-bg-color-active;
