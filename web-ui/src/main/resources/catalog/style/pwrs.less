@@ -6,7 +6,8 @@
  
 //Color
 @toolbar-bg-color : rgb(0,126,195);
-@toolbar-bg-color-active : #99BBE8;
+@toolbar-bg-color-hover : rgba(255,255,255, 0.4);
+@toolbar-bg-color-active : #4D4D4D;
 @toolbar-text-color : rgb(255,255,255);
 
 //size
@@ -28,8 +29,10 @@
 /** CSS rules */
 body {
 	font-family : 'latoregular',Arial, sans-serif;
+	
 }
  
+/** Main navbar */ 
 .pwrs-navbar {
  	height : @toolbar-height;
  	min-height : @toolbar-height;
@@ -38,6 +41,11 @@ body {
  	border : none;
  	margin-top : -7px;
  	color :  @toolbar-text-color;
+ 	padding-left : 0px;
+}
+
+.pwrs-navbar .container-fluid, .pwrs-navbar .navbar-collapse {
+	padding-left : 0px;
 }
  
  .pwrs-navbar .navbar-nav > li > a {
@@ -48,25 +56,26 @@ body {
   	padding-bottom : 10px; 
 }
 
-.pwrs-navbar .navbar-nav > .active > a,  .pwrs-navbar .navbar-nav > .open > a , 
-	.pwrs-navbar .navbar-nav > li > a:hover, .pwrs-navbar .navbar-nav > .active > a:hover,
-	.pwrs-navbar .navbar-nav > .open > a:hover {
+.pwrs-navbar .navbar-nav > .active , .pwrs-navbar .navbar-nav > .open{
 	background-color : @toolbar-bg-color-active;
+}
+
+.pwrs-navbar .navbar-nav > .active > a,  .pwrs-navbar .navbar-nav > .open > a {
+	background-color : transparent;
 	color :  @toolbar-text-color;
 }
 
-.pwrs-navbar .navbar-nav > li > a:focus, .pwrs-navbar .navbar-nav > .active > a:focus
-	 {
-	background-color : @toolbar-bg-color;
-	color :  @toolbar-text-color;
-	border : dotted 1px @toolbar-bg-color-active;
-	height : @toolbar-height;
-}
-
+.pwrs-navbar .navbar-nav > li > a:focus, .pwrs-navbar .navbar-nav > .active > a:focus, 
 .pwrs-navbar .navbar-nav > .open > a:focus {
-	background-color : @toolbar-bg-color-active;
+	background-color : transparent;
 	color :  @toolbar-text-color;
 	border : dotted 1px @toolbar-bg-color-active;
 	height : @toolbar-height;
+}
+
+.pwrs-navbar .navbar-nav > li > a:hover, .pwrs-navbar .navbar-nav > .active > a:hover,
+.pwrs-navbar .navbar-nav > .open > a:hover {
+	background-color : @toolbar-bg-color-hover;
+	color :  @toolbar-text-color;
 }
 
