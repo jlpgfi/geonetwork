@@ -8,6 +8,7 @@
 @toolbar-bg-color : rgb(0,126,195);
 @toolbar-bg-color-hover : rgba(255,255,255, 0.4);
 @toolbar-bg-color-active : #4D4D4D;
+@toolbar-dropdown-bg-color-hover : @toolbar-bg-color ;
 @toolbar-text-color : rgb(255,255,255);
 
 //size
@@ -79,3 +80,7 @@ body {
 	color :  @toolbar-text-color;
 }
 
+.pwrs-navbar .dropdown-menu > li > a:hover {
+ 	background-color :@toolbar-dropdown-bg-color-hover;
+ 	color :  @toolbar-text-color;
+}
