@@ -6,7 +6,11 @@
  
 //Color
 @toolbar-bg-color : rgb(0,126,195);
+@toolbar-bg-color-active : #99BBE8;
 @toolbar-text-color : rgb(255,255,255);
+
+//size
+@toolbar-height : 40px;
 
 //Fonts
 @font-face {
@@ -19,24 +23,42 @@
          url('fonts/lato-regular-webfont.svg#latoregular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 } 
  
- /** CSS rules */
-.gcs-navbar{
- 	height : 40px;
- 	min-height : 40px;
- 	max-height : 40px;
+/** CSS rules */
+body {
+	font-family : 'latoregular',Arial, sans-serif;
+}
+ 
+.gcs-navbar {
+ 	height : @toolbar-height;
+ 	min-height : @toolbar-height;
+ 	max-height : @toolbar-height;
  	background-color :  @toolbar-bg-color;
  	border : none;
  	margin-top : -7px;
  	color :  @toolbar-text-color;
 }
  
- .gcs-navbar .navbar-nav > li > a{
+ .gcs-navbar .navbar-nav > li > a {
   	color :  @toolbar-text-color;
   	font-family : 'latoregular';
   	font-size : 1.5rem;
   	padding-top : 10px;
   	padding-bottom : 10px; 
 }
+
+.gcs-navbar .navbar-nav > .active > a,  .gcs-navbar .navbar-nav > .open > a , 
+	.gcs-navbar .navbar-nav > li > a:hover, .gcs-navbar .navbar-nav > .active > a:hover {
+	background-color : @toolbar-bg-color-active;
+	color :  @toolbar-text-color;
+}
+
+.gcs-navbar .navbar-nav > li > a:focus, .gcs-navbar .navbar-nav > .active > a:focus ,
+	.gcs-navbar .navbar-nav > .open > a:focus {
+	background-color : @toolbar-bg-color-active;
+	color :  @toolbar-text-color;
+	border : dotted 1px @toolbar-bg-color-active;
+	height : @toolbar-height;
+}
+
