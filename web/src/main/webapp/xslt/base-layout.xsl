@@ -46,7 +46,7 @@
       <body data-ng-controller="GnCatController">
         <!-- see http://stackoverflow.com/questions/1037839/how-to-force-link-from-iframe-to-be-opened-in-the-parent-window -->
         <script type="text/javascript" src="/header/js/header.js"></script>
-        <iframe src="/header/?active=geonetwork&amp;lang=fr" style="width:100%;height:40px;border:none;overflow:hidden;" scrolling="no" frameborder="0" onload="_headerOnLoad(this)"></iframe>
+        <iframe src="https://sig-wrs.asogfi.fr/header/?active=geonetwork&amp;lang=fr" style="width:100%;height:40px;border:none;overflow:hidden;" scrolling="no" frameborder="0" onload="_headerOnLoad(this)"></iframe>
         <xsl:choose>
           <xsl:when test="ends-with($service, 'nojs')">
             <!-- No JS degraded mode ... -->
@@ -59,7 +59,7 @@
 
               <!-- AngularJS application -->
               <xsl:if test="$angularApp != 'gn_search' and $angularApp != 'gn_viewer'">
-                <div class="navbar navbar-default gn-top-bar"
+                <div class="navbar navbar-default gn-top-bar gcs-navbar"
                      data-ng-hide="layout.hideTopToolBar"
                      data-ng-include="'{$uiResourcesPath}templates/top-toolbar.html'"></div>              </xsl:if>
 
