@@ -107,19 +107,43 @@ body {
 	padding : 20px;
 }
 
-.pwrs #chips-card {
-	border : solid 1px @card-item-border-color;
-	background-color : @main-bg-color;
+#chips-card {
+	padding : 0;
 }
 
-.pwrs #chips-card .badge-result{
+.chips-card { 
+	border : solid 1px @card-item-border-color;
+	background-color : @main-bg-color;
+	margin : 10px;
+	min-height : 150px;
+	display : flex;
+	flex-direction : column;
+	justify-content : center;
+} 
+
+.chips-card:hover {
+	border : none;
+	background-color : @primary-bg-color;
+	color : @primary-color;
+}
+
+.chips-card:hover .badge-result, .chips-card:hover .badge-text a{
+	color : @primary-color;
+}
+
+.chips-card:hover .badge {
+	background-color : @secondary-color;
+	color : @primary-bg-color ;
+}
+
+.chips-card .badge-result{
 	border : none;
 	background : none;
 	width: 100%;
 	color : @primary-bg-color;
 }
 
-.pwrs .badge {
+.badge {
 	background-color : @secondary-bg-color;
 	color : @secondary-color;
 }
