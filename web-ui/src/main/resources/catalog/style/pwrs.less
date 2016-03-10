@@ -5,11 +5,17 @@
 /** Variables */
  
 //Color
+@body-bg-color : #F2F2F2;
+
 @toolbar-bg-color : rgb(0,126,195);
 @toolbar-bg-color-hover : rgba(255,255,255, 0.4);
 @toolbar-bg-color-active : #4D4D4D;
 @toolbar-dropdown-bg-color-hover : @toolbar-bg-color ;
 @toolbar-text-color : rgb(255,255,255);
+
+@card-bg-color : #FFF;
+@card-item-border-color : rgb(204,204,204);
+@card-item-bg-color : rgb(242,242,242);
 
 //size
 @toolbar-height : 40px;
@@ -30,7 +36,7 @@
 /** CSS rules */
 body {
 	font-family : 'latoregular',Arial, sans-serif;
-	
+	background-color : @body-bg-color;
 }
  
 /** Main navbar */ 
@@ -83,4 +89,22 @@ body {
 .pwrs-navbar .dropdown-menu > li > a:hover {
  	background-color :@toolbar-dropdown-bg-color-hover;
  	color :  @toolbar-text-color;
+}
+
+/** Topics  and ressource type cards */
+.pwrs-topics, .pwrs-ressourcesType {
+	background-color : @card-bg-color;
+	margin-top : 20px;
+	padding : 20px;
+}
+
+.pwrs #chips-card {
+	border : solid 1px @card-item-border-color;
+	background-color : @card-item-bg-color;
+}
+
+.pwrs #chips-card .badge-result{
+	border : none;
+	background : none;
+	width: 100%;
 }
