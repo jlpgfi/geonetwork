@@ -47,16 +47,21 @@
 						data-ng-model="browse" />
 						<span data-translate="">inspireThemes</span>
 					</label> 
-					<label data-ng-show="searchInfo.facet['topicCats'].length > 0">
+					<label data-ng-show="searchInfo.facet['topicCats'].length > 0" class="card-title">
 						<input type="radio" name="browse" value="topics"
-						data-ng-model="browse" /> <span data-translate="">topics</span>
+						data-ng-model="browse" /> <span data-translate="" >topics</span>
 					</label>
 				</span> 
 				<label
-					data-ng-show="searchInfo.facet['inspireThemes'].length > 0 && searchInfo.facet['topicCats'].length == 0"><span
-					data-translate="">inspireThemes</span></label> <label
-					data-ng-show="searchInfo.facet['topicCats'].length > 0 && searchInfo.facet['inspireThemes'].length == 0"><span
-					data-translate="">topics</span></label>
+					data-ng-show="searchInfo.facet['inspireThemes'].length > 0 && searchInfo.facet['topicCats'].length == 0">
+					<span
+					data-translate="">inspireThemes</span>
+				</label> 
+				<label
+					data-ng-show="searchInfo.facet['topicCats'].length > 0 && searchInfo.facet['inspireThemes'].length == 0" class="card-title">
+					<span
+					data-translate="">topics</span>
+				</label>
 				<div class="row">
 					<span id="chips-card"
 						data-ng-repeat="(key, facet) in searchInfo.facet['topicCats']"
@@ -116,7 +121,7 @@
 					<div
 						class="decoration decoration-vertical"></div>
 				</div>
-				<span data-translate="">browseTypes</span>
+				<span data-translate="" class="card-title">browseTypes</span>
 				<div class="row">
 					<span id="chips-card"
 						data-ng-repeat="(key, facet) in searchInfo.facet['types']"

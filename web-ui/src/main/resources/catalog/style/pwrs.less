@@ -40,6 +40,19 @@
     font-weight: normal;
     font-style: normal;
 } 
+
+@font-face {
+    font-family: 'montserratregular';
+    src: url('/geonetwork/catalog/lib/style/fonts/montserrat-regular-webfont.eot');
+    src: url('/geonetwork/catalog/lib/style/fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/geonetwork/catalog/lib/style/fonts/montserrat-regular-webfont.woff2') format('woff2'),
+         url('/geonetwork/catalog/lib/style/fonts/montserrat-regular-webfont.woff') format('woff'),
+         url('/geonetwork/catalog/lib/style/fonts/montserrat-regular-webfont.ttf') format('truetype'),
+         url('/geonetwork/catalog/lib/style/fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
  
 /** CSS rules */
 body {
@@ -104,6 +117,7 @@ body {
 .decoration-container {
 	margin-top : -20px;
 	margin-left : -20px;
+	position: absolute;
 }
 
 .decoration{
@@ -166,4 +180,11 @@ body {
 .badge {
 	background-color : @secondary-bg-color;
 	color : @secondary-color;
+}
+
+.card-title {
+	font-family : 'montserratregular', Arial, sans-serif;
+	font-size : 2rem;
+	font-weight : normal;
+	margin-left : 20px;
 }
