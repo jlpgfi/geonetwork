@@ -1,2 +1,242 @@
-/* Define custom node style here */
-.body {}
+/**
+ * Specific style for gcs application
+ */
+ 
+/** Variables */
+ 
+//Color
+@main-bg-color : #F2F2F2;
+@card-bg-color : #FFF;
+@primary-bg-color : rgb(74,150,209);
+@secondary-bg-color : rgb(167,53,139); 
+@secondary-bg-color-hover : #702861; 
+
+@main-color : rgb(74,74,74);	//use for text
+@primary-color : #fff;	//use for text on primary bg color
+@secondary-color : #fff; // use for text on secondary bg color
+
+@toolbar-bg-color : rgb(0,126,195);
+@toolbar-bg-color-hover : rgba(255,255,255, 0.4);
+@toolbar-bg-color-active : #4D4D4D;
+
+@toolbar-dropdown-bg-color-hover : @toolbar-bg-color ;
+@toolbar-text-color : rgb(255,255,255);
+
+@card-item-border-color : rgb(204,204,204);
+
+
+
+//size
+@toolbar-height : 40px;
+
+//Fonts
+@font-face {
+    font-family: 'latoregular';
+    src: url('/geonetwork/catalog/lib/style/fonts/lato-regular-webfont.eot');
+    src: url('/geonetwork/catalog/lib/style/fonts/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/geonetwork/catalog/lib/style/fonts/lato-regular-webfont.woff2') format('woff2'),
+         url('/geonetwork/catalog/lib/style/fonts/lato-regular-webfont.woff') format('woff'),
+         url('/geonetwork/catalog/lib/style/fonts/lato-regular-webfont.ttf') format('truetype'),
+         url('/geonetwork/catalog/lib/style/fonts/lato-regular-webfont.svg#latoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+} 
+
+@font-face {
+    font-family: 'montserratregular';
+    src: url('/geonetwork/catalog/lib/style/fonts/montserrat-regular-webfont.eot');
+    src: url('/geonetwork/catalog/lib/style/fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/geonetwork/catalog/lib/style/fonts/montserrat-regular-webfont.woff2') format('woff2'),
+         url('/geonetwork/catalog/lib/style/fonts/montserrat-regular-webfont.woff') format('woff'),
+         url('/geonetwork/catalog/lib/style/fonts/montserrat-regular-webfont.ttf') format('truetype'),
+         url('/geonetwork/catalog/lib/style/fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+ 
+/** CSS rules */
+body {
+	font-family : 'latoregular',Arial, sans-serif;
+	background-color : @main-bg-color ;
+	color : @main-color;
+}
+
+/**Extend boostrap default class */
+.btn-primary, .btn-primary:active, .btn-primary:focus ,
+.gn-md-edit-btn:hover, .gn-md-edit-btn:focus, .gn-md-edit-btn:active, .gn-md-edit-btn.active, .open .dropdown-toggle.gn-md-edit-btn
+{
+	background-color : @secondary-bg-color;
+	border-color : @secondary-bg-color;
+	color : @secondary-color;
+}
+
+.btn-primary:focus {
+	border-color : @primary-bg-color;
+}
+
+.btn-primary:hover {
+	background-color : @secondary-bg-color-hover;
+	border-color : @secondary-bg-color;
+	color : @secondary-color;
+}
+
+.form-control {
+	border-color : @secondary-bg-color;
+}
+
+.form-control:focus {
+	border-color : @secondary-bg-color;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(167, 53, 139, 0.6);
+}
+
+ 
+/** Main navbar */ 
+.pwrs-navbar {
+ 	height : @toolbar-height;
+ 	min-height : @toolbar-height;
+ 	max-height : @toolbar-height;
+ 	background-color :  @toolbar-bg-color;
+ 	border : none;
+ 	margin-top : -7px;
+ 	color :  @toolbar-text-color;
+ 	padding-left : 0px;
+}
+
+.pwrs-navbar .container-fluid, .pwrs-navbar .navbar-collapse {
+	padding-left : 0px;
+}
+ 
+ .pwrs-navbar .navbar-nav > li > a {
+  	color :  @toolbar-text-color;
+  	font-family : 'latoregular';
+  	font-size : 1.5rem;
+  	padding-top : 10px;
+  	padding-bottom : 10px; 
+}
+
+.pwrs-navbar .navbar-nav > .active , .pwrs-navbar .navbar-nav > .open{
+	background-color : @toolbar-bg-color-active;
+}
+
+.pwrs-navbar .navbar-nav > .active > a,  .pwrs-navbar .navbar-nav > .open > a {
+	background-color : transparent;
+	color :  @toolbar-text-color;
+}
+
+.pwrs-navbar .navbar-nav > li > a:focus, .pwrs-navbar .navbar-nav > .active > a:focus, 
+.pwrs-navbar .navbar-nav > .open > a:focus {
+	background-color : transparent;
+	color :  @toolbar-text-color;
+	border : dotted 1px @toolbar-bg-color-active;
+	height : @toolbar-height;
+}
+
+.pwrs-navbar .navbar-nav > li > a:hover, .pwrs-navbar .navbar-nav > .active > a:hover,
+.pwrs-navbar .navbar-nav > .open > a:hover {
+	background-color : @toolbar-bg-color-hover;
+	color :  @toolbar-text-color;
+}
+
+.pwrs-navbar .dropdown-menu > li > a:hover {
+ 	background-color :@toolbar-dropdown-bg-color-hover;
+ 	color :  @toolbar-text-color;
+}
+
+/** Decoration at the left top corner of block */
+.decoration-container {
+	margin-top : -20px;
+	margin-left : -20px;
+	position: absolute;
+}
+
+.decoration{
+	background-color : @main-color;
+}
+
+.decoration-horizontal{
+	width : 40px;
+	height : 20px;
+}
+
+.decoration-vertical{
+	width : 20px;
+	height : 20px;
+}
+
+/** Topics  and ressource type cards */
+.pwrs-topics, .pwrs-ressourcesType {
+	background-color : @card-bg-color;
+	margin-top : 20px;
+	padding : 20px;
+}
+
+#chips-card {
+	padding : 0;
+}
+
+.chips-card { 
+	border : solid 1px @card-item-border-color;
+	background-color : @main-bg-color;
+	margin : 10px;
+	min-height : 150px;
+	display : flex;
+	flex-direction : column;
+	justify-content : center;
+} 
+
+.chips-card:hover {
+	border : none;
+	background-color : @primary-bg-color;
+	color : @primary-color;
+}
+
+.chips-card:hover .badge-result, .chips-card:hover .badge-text a{
+	color : @primary-color;
+}
+
+.chips-card:hover .badge {
+	background-color : @secondary-color;
+	color : @primary-bg-color ;
+}
+
+.chips-card .badge-result{
+	border : none;
+	background : none;
+	width: 100%;
+	color : @primary-bg-color;
+}
+
+.badge {
+	background-color : @secondary-bg-color;
+	color : @secondary-color;
+}
+
+.card-title {
+	font-family : 'montserratregular', Arial, sans-serif;
+	font-size : 2rem;
+	font-weight : normal;
+	margin-left : 20px;
+}
+
+/** Tabs */
+.tab a {
+	color : @main-color;
+	cursor : pointer;
+}
+
+.nav-tabs {
+	border-color : @primary-bg-color;
+}
+
+.nav-tabs > li > a:hover {
+	border : none;
+	background-color : rgba(255,255,255,0.8);
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+	background-color : @primary-bg-color;
+	color : @primary-color;
+	border-radius : 0;
+	border-color : @primary-bg-color;
+}
