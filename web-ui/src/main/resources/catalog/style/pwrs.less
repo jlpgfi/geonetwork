@@ -9,6 +9,7 @@
 @card-bg-color : #FFF;
 @primary-bg-color : rgb(74,150,209);
 @secondary-bg-color : rgb(167,53,139); 
+@secondary-bg-color-hover : #CE89C1; 
 
 @main-color : rgb(74,74,74);	//use for text
 @primary-color : #fff;	//use for text on primary bg color
@@ -60,6 +61,33 @@ body {
 	background-color : @main-bg-color ;
 	color : @main-color;
 }
+
+/**Extend boostrap default class */
+.btn-primary, .btn-primary:active, .btn-primary:focus {
+	background-color : @secondary-bg-color;
+	border-color : @secondary-bg-color;
+	color : @secondary-color;
+}
+
+.btn-primary:focus {
+	border-color : @primary-bg-color;
+}
+
+.btn-primary:hover {
+	background-color : @secondary-bg-color-hover;
+	border-color : @secondary-bg-color;
+	color : @secondary-color;
+}
+
+.form-control {
+	border-color : @secondary-bg-color;
+}
+
+.form-control:focus {
+	border-color : @secondary-bg-color;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(167, 53, 139, 0.6);
+}
+
  
 /** Main navbar */ 
 .pwrs-navbar {
