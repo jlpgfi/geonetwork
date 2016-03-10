@@ -63,19 +63,19 @@ body {
 }
 
 /**Extend boostrap default class */
-.btn-primary, .btn-primary:active, .btn-primary:focus ,
-.gn-md-edit-btn:hover, .gn-md-edit-btn:focus, .gn-md-edit-btn:active, .gn-md-edit-btn.active, .open .dropdown-toggle.gn-md-edit-btn
+.btn-primary, .btn-primary:active, .btn-primary:focus,
+.gn-md-edit-btn, .gn-md-edit-btn:focus, .gn-md-edit-btn:active, .gn-md-edit-btn.active, .open .dropdown-toggle.gn-md-edit-btn
 {
 	background-color : @secondary-bg-color;
 	border-color : @secondary-bg-color;
 	color : @secondary-color;
 }
 
-.btn-primary:focus {
+.btn-primary:focus, .gn-md-edit-btn:focus {
 	border-color : @primary-bg-color;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .gn-md-edit-btn:hover{
 	background-color : @secondary-bg-color-hover;
 	border-color : @secondary-bg-color;
 	color : @secondary-color;
