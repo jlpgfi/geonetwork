@@ -5,19 +5,25 @@
 /** Variables */
  
 //Color
-@body-bg-color : #F2F2F2;
+@main-bg-color : #F2F2F2;
+@card-bg-color : #FFF;
+@primary-bg-color : rgb(74,150,209);
+@secondary-bg-color : rgb(167,53,139); 
+
+@main-color : rgb(74,74,74);	//use for text
+@primary-color : #fff;	//use for text on primary bg color
+@secondary-color : #fff; // use for text on secondary bg color
 
 @toolbar-bg-color : rgb(0,126,195);
 @toolbar-bg-color-hover : rgba(255,255,255, 0.4);
 @toolbar-bg-color-active : #4D4D4D;
+
 @toolbar-dropdown-bg-color-hover : @toolbar-bg-color ;
 @toolbar-text-color : rgb(255,255,255);
 
-@card-bg-color : #FFF;
 @card-item-border-color : rgb(204,204,204);
-@card-item-bg-color : rgb(242,242,242);
 
-@icon-color : rgb(74,150,209);
+
 
 //size
 @toolbar-height : 40px;
@@ -38,7 +44,8 @@
 /** CSS rules */
 body {
 	font-family : 'latoregular',Arial, sans-serif;
-	background-color : @body-bg-color;
+	background-color : @main-bg-color ;
+	color : @main-color;
 }
  
 /** Main navbar */ 
@@ -102,12 +109,17 @@ body {
 
 .pwrs #chips-card {
 	border : solid 1px @card-item-border-color;
-	background-color : @card-item-bg-color;
+	background-color : @main-bg-color;
 }
 
 .pwrs #chips-card .badge-result{
 	border : none;
 	background : none;
 	width: 100%;
-	
+	color : @primary-bg-color;
+}
+
+.pwrs .badge {
+	background-color : @secondary-bg-color;
+	color : @secondary-color;
 }
