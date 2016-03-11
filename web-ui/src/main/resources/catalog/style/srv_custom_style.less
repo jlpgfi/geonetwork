@@ -156,7 +156,7 @@ body {
 	height : 20px;
 }
 
-/** Topics  and ressource type cards */
+/** Home - Topics  and ressource type cards */
 .pwrs-topics, .pwrs-ressourcesType {
 	background-color : @card-bg-color;
 	margin-top : 20px;
@@ -221,7 +221,14 @@ body {
 	border-radius : 0;
 }
 
-/** Ressources type -search page */
+
+/** Search - Ressources type  */
+[data-ng-search-form] {
+  .gn-top-search {
+  	border-bottom : none;
+  } 
+}
+
 
 .pwrs-resultFilter {
 	background-color:@card-bg-color;
@@ -234,37 +241,40 @@ body {
 }
 
 
+.gn-facet-list {
+	margin-top : -25px;
+}
 
-//.gn-facet-list {
-//	margin-top : -25px;
-//}
-//
-//.gn-facet .list-group-item:hover {
-//	color : @primary-bg-color;
-//}
-//
-//.gn-facet-list h4 {
-//	font-family : 'montserratregular', Arial, sans-serif;
-//	font-size : 1.7rem;
-//	font-weight : normal;
-//	border-bottom : none;
-//	text-transform : capitalize;
-//	margin-bottom : 5px;
-//}
-//
-//.gn-facet .list-group {
-//	border-left : none;	
-//}
-//
-//.gn-facet-list label {
-//	font-weight : normal;
-//}
-//
-//.gn-facet .gn-facet-collapseall {
-//	top : initial;
-//	margin-top : 20px;
-//}
-//
+.gn-facet .list-group-item:hover {
+	color : @primary-bg-color;
+}
+
+.gn-facet .list-group-item label.gn-facet-active {
+	color : @primary-bg-color;
+}
+
+.gn-facet-list h4 {
+	font-family : 'montserratregular', Arial, sans-serif;
+	font-size : 1.7rem;
+	font-weight : normal;
+	border-bottom : none;
+	text-transform : capitalize;
+	margin-bottom : 5px;
+}
+
+.gn-facet .list-group {
+	border-left : none;	
+}
+
+.gn-facet-list label {
+	font-weight : normal;
+}
+
+.gn-facet .gn-facet-collapseall {
+	top : initial;
+	margin-top : 20px;
+}
+
 ///** Seacrh page - result */
 //ul.gn-resultview li.gn-grid {
 //	border : none;
