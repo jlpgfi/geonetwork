@@ -21,7 +21,7 @@
 	
 	<div class="row">
 		<!--  Filter-->
-		<div class="col-md-3 gn-search-facet pwrs-resultFilter">
+		<div class="col-md-3 gn-search-facet pwrs-resultFilter" data-ng-show="searchResults.records.length > 0">
 			<div class="decoration-container">
 				<div class="decoration decoration-horizontal"></div>
 				<div class="decoration decoration-vertical"></div>
@@ -40,6 +40,7 @@
            data-current-facets="currentFacets">
       </div>-->
 		</div>
+		<div class="col-md-3" data-ng-show="searchResults.records.length <= 0"></div>
 		
 		<!--  Results-->
 		<div class="col-md-9">
