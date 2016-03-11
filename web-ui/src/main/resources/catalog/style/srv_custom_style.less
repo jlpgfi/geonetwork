@@ -144,11 +144,6 @@ body {
 }
 
 /** Decoration at the left top corner of block */
-.decoration-container {
-	margin-top : -20px;
-	margin-left : -20px;
-	position: absolute;
-}
 
 .decoration{
 	background-color : @main-color;
@@ -169,6 +164,12 @@ body {
 	background-color : @card-bg-color;
 	margin-top : 20px;
 	padding : 20px;
+}
+
+.pwrs-topics .decoration-container , .pwrs-ressourcesType .decoration-container {
+	margin-top : -20px;
+	margin-left : -20px;
+	position: absolute;
 }
 
 #chips-card {
@@ -212,7 +213,7 @@ body {
 	color : @secondary-color;
 }
 
-.card-title {
+.pwrs-title {
 	font-family : 'montserratregular', Arial, sans-serif;
 	font-size : 2rem;
 	font-weight : normal;
@@ -254,6 +255,14 @@ body {
 
 .pwrs-resultFilter {
 	background-color:@card-bg-color;
+}
+
+.pwrs-resultFilter .decoration-container {
+	margin-left : -15px;
+}
+
+.gn-facet .gn-facet-collapseall {
+	top : initial;
 }
 
 /**Map - search page */
