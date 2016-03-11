@@ -58,45 +58,28 @@
 /** CSS rules */
 body {
 	font-family : 'latoregular',Arial, sans-serif;
-	background-color : @main-bg-color ;
-	color : @main-color;
 }
 
-/**Extend boostrap default class */
-.btn-primary, .btn-primary:active, .btn-primary:focus,
-.gn-md-edit-btn, .gn-md-edit-btn:focus, .gn-md-edit-btn:active, .gn-md-edit-btn.active, .open .dropdown-toggle.gn-md-edit-btn
+/** Serach form : button & text field*/
+.pwrs-searchButton
 {
 	background-color : @secondary-bg-color;
 	border-color : @secondary-bg-color;
 	color : @secondary-color;
 }
 
-.btn-primary:focus, .gn-md-edit-btn:focus {
+.pwrs-searchButton:focus, .gn-md-edit-btn:focus {
 	border-color : @primary-bg-color;
 }
 
-.btn-primary:hover, .gn-md-edit-btn:hover{
+.pwrs-searchButton:hover, .gn-md-edit-btn:hover{
 	background-color : @secondary-bg-color-hover;
 	border-color : @secondary-bg-color-hover;
 	color : @secondary-color;
 }
 
-.btn-default {
-	color : @secondary-bg-color;
-	border-color : @secondary-bg-color;
-}
-
-.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
-	color : @secondary-bg-color;
-	border-color : @secondary-bg-color;
-}
-
 .btn:focus, .btn:active:focus, .btn.active:focus {
 	outline : none;
-}
-
-.form-control, .bootstrap-tagsinput {
-	border-color : @secondary-bg-color;
 }
 
 .form-control:focus, .bootstrap-tagsinput:focus, .bootstrap-tagsinput:active {
@@ -110,7 +93,6 @@ body {
 .pwrs-navbar {
  	height : @toolbar-height;
  	min-height : @toolbar-height;
- 	max-height : @toolbar-height;
  	background-color :  @toolbar-bg-color;
  	border : none;
  	margin-top : -7px;
@@ -223,47 +205,12 @@ body {
 	color : @primary-bg-color;
 }
 
-.badge {
-	background-color : @secondary-bg-color;
-	color : @secondary-color;
-}
 
 .pwrs-title{
 	font-family : 'montserratregular', Arial, sans-serif;
 	font-size : 2rem;
 	font-weight : normal;
 	margin-left : 20px;
-}
-
-/** Tabs */
-.tab a {
-	color : @main-color;
-	cursor : pointer;
-}
-
-.gn-info-list li section{
-	background-color : @card-bg-color;
-}
-
-.nav-tabs {
-	border-color : @primary-bg-color;
-}
-
-.nav-tabs > li > a:hover {
-	border : none;
-	background-color : rgba(255,255,255,0.8);
-}
-
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
-	background-color : @primary-bg-color;
-	color : @primary-color;
-	border-radius : 0;
-	border-color : @primary-bg-color;
-}
-
-/** Search form */
-[data-ng-search-form] .gn-top-search {
-	border : none;
 }
 
 /** Ressources type -search page */
@@ -278,43 +225,43 @@ body {
 	margin-left : -15px;
 }
 
-.gn-facet-list {
-	margin-top : -25px;
-}
-
-.gn-facet .list-group-item:hover {
-	color : @primary-bg-color;
-}
-
-.gn-facet-list h4 {
-	font-family : 'montserratregular', Arial, sans-serif;
-	font-size : 1.7rem;
-	font-weight : normal;
-	border-bottom : none;
-	text-transform : capitalize;
-	margin-bottom : 5px;
-}
-
-.gn-facet .list-group {
-	border-left : none;	
-}
-
-.gn-facet-list label {
-	font-weight : normal;
-}
-
-.gn-facet .gn-facet-collapseall {
-	top : initial;
-	margin-top : 20px;
-}
-
-/** Seacrh page - result */
-ul.gn-resultview li.gn-grid {
-	border : none;
-	border-radius : 0;
-}
-
-.gn-resultview .gn-md-thumbnail {
-	border-radius : 0;
-}
-
+//.gn-facet-list {
+//	margin-top : -25px;
+//}
+//
+//.gn-facet .list-group-item:hover {
+//	color : @primary-bg-color;
+//}
+//
+//.gn-facet-list h4 {
+//	font-family : 'montserratregular', Arial, sans-serif;
+//	font-size : 1.7rem;
+//	font-weight : normal;
+//	border-bottom : none;
+//	text-transform : capitalize;
+//	margin-bottom : 5px;
+//}
+//
+//.gn-facet .list-group {
+//	border-left : none;	
+//}
+//
+//.gn-facet-list label {
+//	font-weight : normal;
+//}
+//
+//.gn-facet .gn-facet-collapseall {
+//	top : initial;
+//	margin-top : 20px;
+//}
+//
+///** Seacrh page - result */
+//ul.gn-resultview li.gn-grid {
+//	border : none;
+//	border-radius : 0;
+//}
+//
+//.gn-resultview .gn-md-thumbnail {
+//	border-radius : 0;
+//}
+//
