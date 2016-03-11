@@ -16,7 +16,7 @@
 @secondary-color : #fff; // use for text on secondary bg color
 
 @toolbar-bg-color : rgb(0,126,195);
-@toolbar-bg-color-hover : rgba(255,255,255, 0.4);
+@toolbar-bg-color-hover : rgba(0,0,0, 0.2);
 @toolbar-bg-color-active : #4D4D4D;
 
 @toolbar-dropdown-bg-color-hover : @toolbar-bg-color ;
@@ -77,17 +77,32 @@ body {
 
 .btn-primary:hover, .gn-md-edit-btn:hover{
 	background-color : @secondary-bg-color-hover;
-	border-color : @secondary-bg-color;
+	border-color : @secondary-bg-color-hover;
 	color : @secondary-color;
 }
 
-.form-control {
+.btn-default {
+	color : @secondary-bg-color;
 	border-color : @secondary-bg-color;
 }
 
-.form-control:focus {
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+	color : @secondary-bg-color;
+	border-color : @secondary-bg-color;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+	outline : none;
+}
+
+.form-control, .bootstrap-tagsinput {
+	border-color : @secondary-bg-color;
+}
+
+.form-control:focus, .bootstrap-tagsinput:focus, .bootstrap-tagsinput:active {
 	border-color : @secondary-bg-color;
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(167, 53, 139, 0.6);
+	outline : none;
 }
 
  
@@ -213,7 +228,7 @@ body {
 	color : @secondary-color;
 }
 
-.pwrs-title {
+.pwrs-title{
 	font-family : 'montserratregular', Arial, sans-serif;
 	font-size : 2rem;
 	font-weight : normal;
@@ -255,14 +270,51 @@ body {
 
 .pwrs-resultFilter {
 	background-color:@card-bg-color;
+	padding-bottom : 30px;
+	margin-top: 20px;
 }
 
 .pwrs-resultFilter .decoration-container {
 	margin-left : -15px;
 }
 
-.gn-facet .gn-facet-collapseall {
-	top : initial;
+.gn-facet-list {
+	margin-top : -25px;
 }
 
-/**Map - search page */
+.gn-facet .list-group-item:hover {
+	color : @primary-bg-color;
+}
+
+.gn-facet-list h4 {
+	font-family : 'montserratregular', Arial, sans-serif;
+	font-size : 1.7rem;
+	font-weight : normal;
+	border-bottom : none;
+	text-transform : capitalize;
+	margin-bottom : 5px;
+}
+
+.gn-facet .list-group {
+	border-left : none;	
+}
+
+.gn-facet-list label {
+	font-weight : normal;
+}
+
+.gn-facet .gn-facet-collapseall {
+	top : initial;
+	margin-top : 20px;
+}
+
+/** Seacrh page - result */
+ul.gn-resultview li.gn-grid {
+	border : none;
+	border-radius : 0;
+}
+
+.gn-resultview .gn-md-thumbnail {
+	border-radius : 0;
+}
+
