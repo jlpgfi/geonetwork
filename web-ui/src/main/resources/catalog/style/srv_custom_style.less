@@ -9,7 +9,7 @@
 @card-bg-color : #FFF;
 @primary-bg-color : rgb(74,150,209);
 @secondary-bg-color : rgb(167,53,139); 
-@secondary-bg-color-hover : #702861; 
+@secondary-bg-color-hover : darken(@secondary-bg-color,8%); 
 
 @main-color : rgb(74,74,74);	//use for text
 @primary-color : #fff;	//use for text on primary bg color
@@ -22,6 +22,7 @@
 @toolbar-dropdown-bg-color-hover : @toolbar-bg-color ;
 @toolbar-text-color : rgb(255,255,255);
 
+@card-border-color : #ececec;
 @card-item-border-color : rgb(204,204,204);
 
 
@@ -197,8 +198,12 @@ body {
 }
 
 /** Home - Topics  and ressource type cards */
-.pwrs-topics, .pwrs-ressourcesType {
+.pwrs-topics, .pwrs-ressourcesType, .pwrs-resultFilter, .gn-record, .gn-md-side {
 	background-color : @card-bg-color;
+	border : solid 1px @card-border-color;
+}
+
+.pwrs-topics, .pwrs-ressourcesType {
 	margin-top : 20px;
 	padding : 20px;
 }
@@ -269,14 +274,12 @@ body {
   } 
 }
 
-
-.pwrs-resultFilter {
-	background-color:@card-bg-color;
+.pwrs-resultFilter, .gn-record {
 	padding-bottom : 30px;
 	margin-top: 20px;
 }
 
-.pwrs-resultFilter .decoration-container {
+.pwrs-resultFilter .decoration-container{
 	margin-left : -15px;
 }
 
@@ -330,3 +333,32 @@ ul.gn-resultview li.gn-grid {
 	border-radius : 0;
 }
 
+/** Detail page */
+.gn-record {
+	padding-left : 20px;
+	padding-right : 20px;
+	margin-left	: -15px;
+}
+
+.gn-record .decoration-container {
+	margin-left : -20px;
+}
+
+.gn-record h1 {
+	margin-top : 0;
+	margin-left : 10px;
+	font-family : 'montserratregular', Arial, sans-serif;
+	font-size : 3rem;
+	font-weight : normal;
+	text-transform : capitalize;
+}
+
+.gn-record h2 {
+	font-family : 'montserratregular', Arial, sans-serif;
+	font-size : 2rem;
+	font-weight : normal;
+}
+
+.gn-md-side {
+	margin-top : 20px;
+}
