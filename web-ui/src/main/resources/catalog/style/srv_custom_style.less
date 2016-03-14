@@ -61,19 +61,20 @@ body {
 }
 
 /** Serach form : button & text field*/
-.pwrs-search .btn{
+.pwrs-search .btn-primary{
 	background-color : @secondary-bg-color;
 	border-color : @secondary-bg-color;
 	color : @secondary-color;
+	border-radius : 0;
 }
 
-.pwrs-search .btn:active, .pwrs-search .btn:focus {
+.pwrs-search .btn-primary:active, .pwrs-search .btn-primary:focus {
 	color : @secondary-color;
     background-color: darken(@secondary-bg-color, 8%);
-        border-color: darken(@secondary-bg-color, 12%);
+    border-color: darken(@secondary-bg-color, 12%);
 }
 
-.pwrs-search .btn:hover, .gn-md-edit-btn:hover{
+.pwrs-search .btn-primary:hover, .gn-md-edit-btn:hover{
 	background-color : @secondary-bg-color-hover;
 	border-color : @secondary-bg-color-hover;
 	color : @secondary-color;
@@ -83,14 +84,30 @@ body {
 	outline : none;
 }
 
-.pwrs-search .form-control {
-	border-color :@secondary-bg-color;
+.pwrs-search .btn-default, .pwrs-search .bootstrap-tagsinput, .pwrs-search .form-control,  
+.pwrs-search .input-group-addon{
+	border-color : @secondary-bg-color;
+	background-color : @card-bg-color;
+	border-radius : 0;
+}
+
+.pwrs-search .btn-default, .pwrs-search .input-group-addon {
+	color : @secondary-bg-color;
+}
+
+.pwrs-search .btn-link {
+	color : @main-color;
 }
 
 .pwrs-search .form-control:focus, .pwrs-search .bootstrap-tagsinput:focus, .pwrs-search .bootstrap-tagsinput:active {
 	border-color : @secondary-bg-color;
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(167, 53, 139, 0.6);
 	outline : none;
+}
+
+.pwrs-search h3 {
+	font-family : 'montserratregular', Arial, sans-serif;
+	font-weight : normal;
 }
 
  
