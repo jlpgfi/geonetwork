@@ -74,7 +74,7 @@ body {
     border-color: darken(@secondary-bg-color, 12%);
 }
 
-.pwrs-search .btn-primary:hover, .gn-md-edit-btn:hover{
+.pwrs-search .btn-primary:hover{
 	background-color : @secondary-bg-color-hover;
 	border-color : @secondary-bg-color-hover;
 	color : @secondary-color;
@@ -315,13 +315,18 @@ body {
 	margin-top : 20px;
 }
 
-///** Seacrh page - result */
-//ul.gn-resultview li.gn-grid {
-//	border : none;
-//	border-radius : 0;
-//}
-//
-//.gn-resultview .gn-md-thumbnail {
-//	border-radius : 0;
-//}
-//
+/** Search page - result */
+
+.gn-md-edit-btn {
+	background-color : @card-bg-color;
+	color : @primary-bg-color;
+}
+
+ul.gn-resultview li.gn-grid {
+	border-radius : 0;
+}
+
+.gn-resultview .gn-md-thumbnail {
+	border-radius : 0;
+}
+
