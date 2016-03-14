@@ -1,5 +1,29 @@
 // Core variables and mixins
 @import "../lib/style/bootstrap/less/variables.less";
+
+/*****************************************************/
+/* Override boostrap var - avoir cloning submodules */
+
+@brand-primary:         rgb(74,150,209);
+//** Background color for `<body>`.
+@body-bg:               #F2F2F2;
+//** Global text color on `<body>`.
+@text-color:            rgb(74,74,74);
+
+//** Global textual link color.
+@link-color:            @brand-primary;
+//** Link hover color set via `darken()` function.
+@link-hover-color:      darken(@link-color, 15%);
+
+@badge-color:                 #fff;
+//** Linked badge text color on hover
+@badge-link-hover-color:      #fff;
+@badge-bg:                    rgb(167,53,139);
+
+
+
+/*****************************************************/
+
 @import "../lib/style/bootstrap/less/mixins.less";
 
 // Reset
