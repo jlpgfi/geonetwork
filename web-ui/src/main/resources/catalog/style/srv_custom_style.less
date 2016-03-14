@@ -7,7 +7,7 @@
 //Color
 @main-bg-color : #F2F2F2;
 @card-bg-color : #FFF;
-@primary-bg-color : rgb(74,150,209);
+@primary-bg-color : rgb(0,126,195);
 @secondary-bg-color : rgb(167,53,139); 
 @secondary-bg-color-hover : darken(@secondary-bg-color,8%); 
 
@@ -22,7 +22,7 @@
 @toolbar-dropdown-bg-color-hover : @toolbar-bg-color ;
 @toolbar-text-color : rgb(255,255,255);
 
-@card-border-color : #ececec;
+@card-border-color : #ddd;
 @card-item-border-color : rgb(204,204,204);
 
 
@@ -79,6 +79,10 @@ body {
 	background-color : @secondary-bg-color-hover;
 	border-color : @secondary-bg-color-hover;
 	color : @secondary-color;
+}
+
+.btn {
+	border-radius : 0;
 }
 
 .btn:focus, .btn:active:focus, .btn.active:focus {
@@ -320,9 +324,17 @@ body {
 
 /** Search page - result */
 
-.gn-md-edit-btn {
+.gn-md-edit-btn, .gn-md-links .btn-default {
 	background-color : @card-bg-color;
-	color : @primary-bg-color;
+	color : @secondary-bg-color;
+	border-color : @secondary-bg-color;
+	border-radius : 0;
+}
+
+.gn-md-edit-btn:hover, .gn-md-edit-btn:focus, .gn-md-links .btn-default:focus, .gn-md-links .btn-default:hover {
+	background-color : @secondary-bg-color;
+	color : @secondary-color;
+	border-color : @secondary-bg-color;
 }
 
 ul.gn-resultview li.gn-grid {
@@ -332,6 +344,7 @@ ul.gn-resultview li.gn-grid {
 .gn-resultview .gn-md-thumbnail {
 	border-radius : 0;
 }
+
 
 /** Detail page */
 .gn-record {
@@ -362,4 +375,9 @@ ul.gn-resultview li.gn-grid {
 .gn-md-side {
 	margin-top : 20px;
 	margin-bottom: 50px;
+}
+
+.img-thumbnail {
+	border : none;
+	background : transparent;
 }
