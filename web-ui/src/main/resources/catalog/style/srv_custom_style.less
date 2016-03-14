@@ -82,12 +82,6 @@ body {
 	outline : none;
 }
 
-.form-control:focus, .bootstrap-tagsinput:focus, .bootstrap-tagsinput:active {
-	border-color : @secondary-bg-color;
-	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(167, 53, 139, 0.6);
-	outline : none;
-}
-
  
 /** Main navbar */ 
 .pwrs-navbar {
@@ -138,6 +132,17 @@ body {
 .pwrs-navbar .dropdown-menu > li > a:hover {
  	background-color :@toolbar-dropdown-bg-color-hover;
  	color :  @toolbar-text-color;
+}
+
+/** Search forms */
+.pwrs-search .form-control {
+	border-color :@secondary-bg-color;
+}
+
+.pwrs-search .form-control:focus, .pwrs-search .bootstrap-tagsinput:focus, .pwrs-search .bootstrap-tagsinput:active {
+	border-color : @secondary-bg-color;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(167, 53, 139, 0.6);
+	outline : none;
 }
 
 /** Decoration at the left top corner of block */
