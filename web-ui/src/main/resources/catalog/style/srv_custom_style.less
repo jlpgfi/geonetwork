@@ -61,24 +61,35 @@ body {
 }
 
 /** Serach form : button & text field*/
-.pwrs-searchButton
-{
+.pwrs-search .btn{
 	background-color : @secondary-bg-color;
 	border-color : @secondary-bg-color;
 	color : @secondary-color;
 }
 
-.pwrs-searchButton:focus, .gn-md-edit-btn:focus {
-	border-color : @primary-bg-color;
+.pwrs-search .btn:active, .pwrs-search .btn:focus {
+	color : @secondary-color;
+    background-color: darken(@secondary-bg-color, 8%);
+        border-color: darken(@secondary-bg-color, 12%);
 }
 
-.pwrs-searchButton:hover, .gn-md-edit-btn:hover{
+.pwrs-search .btn:hover, .gn-md-edit-btn:hover{
 	background-color : @secondary-bg-color-hover;
 	border-color : @secondary-bg-color-hover;
 	color : @secondary-color;
 }
 
 .btn:focus, .btn:active:focus, .btn.active:focus {
+	outline : none;
+}
+
+.pwrs-search .form-control {
+	border-color :@secondary-bg-color;
+}
+
+.pwrs-search .form-control:focus, .pwrs-search .bootstrap-tagsinput:focus, .pwrs-search .bootstrap-tagsinput:active {
+	border-color : @secondary-bg-color;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(167, 53, 139, 0.6);
 	outline : none;
 }
 
@@ -134,16 +145,6 @@ body {
  	color :  @toolbar-text-color;
 }
 
-/** Search forms */
-.pwrs-search .form-control {
-	border-color :@secondary-bg-color;
-}
-
-.pwrs-search .form-control:focus, .pwrs-search .bootstrap-tagsinput:focus, .pwrs-search .bootstrap-tagsinput:active {
-	border-color : @secondary-bg-color;
-	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(167, 53, 139, 0.6);
-	outline : none;
-}
 
 /** Decoration at the left top corner of block */
 
