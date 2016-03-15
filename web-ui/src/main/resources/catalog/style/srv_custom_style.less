@@ -171,9 +171,8 @@ body {
 
 .gn-top-bar .navbar-nav > li > a:focus, .gn-top-bar .navbar-nav > .active > a:focus, 
 .gn-top-bar .navbar-nav > .open > a:focus {
-	background-color : transparent;
+	background-color : @toolbar-bg-color-hover;
 	color :  @toolbar-text-color;
-	border : none;//dotted 1px @toolbar-bg-color-active;
 }
 
 .gn-top-bar .navbar-nav > li > a:hover, .gn-top-bar .navbar-nav > .active > a:hover,
@@ -191,6 +190,10 @@ body {
  	color :  @toolbar-text-color;
 }
 
+.gn-view-menu-button > li > a:hover {
+	padding-top : 10px;
+	padding-bottom : 10px;
+}
 
 /** Decoration at the left top corner of block */
 
