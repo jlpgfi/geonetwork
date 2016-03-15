@@ -96,11 +96,13 @@ body {
 	border-radius : 0;
 }
 
-.btn-default:hover, .btn-default:focus {
+.btn-default:hover, .btn-default:focus, .btn-group.open .btn-default {
 	border-color : @primary-bg-color;
 	background-color : @primary-bg-color;
 	color : @card-bg-color;
 }
+
+
 
 
 .pwrs-search .btn-default, .pwrs-search .bootstrap-tagsinput, .pwrs-search .form-control,  
@@ -184,7 +186,7 @@ body {
 	color :  @toolbar-text-color;
 }
 
-.pwrs-navbar .dropdown-menu > li > a:hover {
+.dropdown-menu > li > a:hover {
  	background-color :@toolbar-dropdown-bg-color-hover;
  	color :  @toolbar-text-color;
 }
