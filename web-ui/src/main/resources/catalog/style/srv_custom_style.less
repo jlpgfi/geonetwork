@@ -89,6 +89,20 @@ body {
 	outline : none;
 }
 
+.btn-default {
+	border-color : @primary-bg-color;
+	background-color : @card-bg-color;
+	color : @primary-bg-color;
+	border-radius : 0;
+}
+
+.btn-default:hover, .btn-default:focus {
+	border-color : @primary-bg-color;
+	background-color : @primary-bg-color;
+	color : @card-bg-color;
+}
+
+
 .pwrs-search .btn-default, .pwrs-search .bootstrap-tagsinput, .pwrs-search .form-control,  
 .pwrs-search .input-group-addon{
 	border-color : @secondary-bg-color;
@@ -385,6 +399,12 @@ ul.gn-resultview li.gn-grid {
 	border : none;
 	background : transparent;
 }
+
+.gn-related-item{
+	border-color : @primary-bg-color;
+	margin-top : -1px;
+}
+
 
 /** Contribute page  */
 
