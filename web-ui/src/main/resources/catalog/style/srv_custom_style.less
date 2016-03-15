@@ -26,10 +26,6 @@
 @card-item-border-color : rgb(204,204,204);
 
 
-
-//size
-@toolbar-height : 40px;
-
 //Fonts
 @font-face {
     font-family: 'latoregular';
@@ -61,7 +57,7 @@ body {
 	font-family : 'latoregular',Arial, sans-serif;
 }
 
-/** Serach form : button & text field*/
+/** Search form : button & text field*/
 .pwrs-search .btn-primary{
 	background-color : @secondary-bg-color;
 	border-color : @secondary-bg-color;
@@ -80,6 +76,8 @@ body {
 	border-color : @secondary-bg-color-hover;
 	color : @secondary-color;
 }
+
+/** Buttons */
 
 .btn {
 	border-radius : 0;
@@ -101,9 +99,6 @@ body {
 	background-color : @primary-bg-color;
 	color : @card-bg-color;
 }
-
-
-
 
 .pwrs-search .btn-default, .pwrs-search .bootstrap-tagsinput, .pwrs-search .form-control,  
 .pwrs-search .input-group-addon{
@@ -141,9 +136,7 @@ body {
 
  
 /** Main navbar */ 
-.pwrs-navbar {
- 	height : @toolbar-height;
- 	min-height : @toolbar-height;
+.gn-top-bar {
  	background-color :  @toolbar-bg-color;
  	border : none;
  	margin-top : -7px;
@@ -151,39 +144,40 @@ body {
  	padding-left : 0px;
 }
 
-.pwrs-navbar .container-fluid, .pwrs-navbar .navbar-collapse {
+.gn-top-bar .container-fluid, .gn-top-bar .navbar-collapse {
 	padding-left : 0px;
 }
  
- .pwrs-navbar .navbar-nav > li > a {
+ .gn-top-bar .navbar-nav > li > a {
   	color :  @toolbar-text-color;
   	font-family : 'latoregular';
   	font-size : 1.5rem;
-  	padding-top : 10px;
-  	padding-bottom : 10px; 
 }
 
-.pwrs-navbar .navbar-nav > .active , .pwrs-navbar .navbar-nav > .open{
+.gn-top-bar .navbar-nav > .active , .gn-top-bar .navbar-nav > .open{
 	background-color : @toolbar-bg-color-active;
 }
 
-.pwrs-navbar .navbar-nav > .active > a,  .pwrs-navbar .navbar-nav > .open > a {
+.gn-top-bar .navbar-nav > .active > a,  .gn-top-bar .navbar-nav > .open > a {
 	background-color : transparent;
 	color :  @toolbar-text-color;
 }
 
-.pwrs-navbar .navbar-nav > li > a:focus, .pwrs-navbar .navbar-nav > .active > a:focus, 
-.pwrs-navbar .navbar-nav > .open > a:focus {
+.gn-top-bar .navbar-nav > li > a:focus, .gn-top-bar .navbar-nav > .active > a:focus, 
+.gn-top-bar .navbar-nav > .open > a:focus {
 	background-color : transparent;
 	color :  @toolbar-text-color;
 	border : dotted 1px @toolbar-bg-color-active;
-	height : @toolbar-height;
 }
 
-.pwrs-navbar .navbar-nav > li > a:hover, .pwrs-navbar .navbar-nav > .active > a:hover,
-.pwrs-navbar .navbar-nav > .open > a:hover {
+.gn-top-bar .navbar-nav > li > a:hover, .gn-top-bar .navbar-nav > .active > a:hover,
+.gn-top-bar .navbar-nav > .open > a:hover {
 	background-color : @toolbar-bg-color-hover;
 	color :  @toolbar-text-color;
+}
+
+.gn-top-bar .btn-default:hover{
+	border-color : #fff;
 }
 
 .dropdown-menu > li > a:hover {
@@ -346,15 +340,15 @@ body {
 
 .gn-md-edit-btn, .gn-md-links .btn-default {
 	background-color : @card-bg-color;
-	color : @secondary-bg-color;
-	border-color : @secondary-bg-color;
+	color : @primary-bg-color;
+	border-color : @primary-bg-color;
 	border-radius : 0;
 }
 
 .gn-md-edit-btn:hover, .gn-md-edit-btn:focus, .gn-md-links .btn-default:focus, .gn-md-links .btn-default:hover {
-	background-color : @secondary-bg-color;
-	color : @secondary-color;
-	border-color : @secondary-bg-color;
+	background-color : @primary-bg-color;
+	color : @primary-color;
+	border-color : @primary-bg-color;
 }
 
 ul.gn-resultview li.gn-grid {
@@ -414,8 +408,9 @@ ul.gn-resultview li.gn-grid {
 	margin-bottom : 50px;
 	margin-top : 20px;
 	padding : 20px;
+	padding-top : 10px;
 }
 
-.gn-results-editor tr:first-child {
+.gn-results-editor tr:first-child td{
 	border-top : none;
 }
