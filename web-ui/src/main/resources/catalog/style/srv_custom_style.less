@@ -195,6 +195,36 @@ body {
 	padding-bottom : 10px;
 }
 
+.gn-top-bar .navbar-toggle, .gn-top-bar .navbar-toggle:hover {
+	border-color : transparent;
+	border-radius : 0;
+	color : @primary-color;
+	background-color : @toolbar-bg-color-active;
+	
+	.icon-bar{
+		background-color : @primary-color;
+	}
+}
+
+.gn-top-bar .navbar-toggle.collapsed {
+	background-color : @toolbar-bg-color;
+}
+
+@media screen and (max-width: 640px) {
+	.gn-top-bar {
+		padding-left : 20px;
+	}
+	
+	.gn-top-bar .container-fluid, .gn-top-bar .navbar-collapse {
+		padding-left : 15px;
+	}
+	
+	.gn-top-bar .visible-lg {
+		display : inline-block !important;
+	}
+}
+
+
 /** Decoration at the left top corner of block */
 
 .decoration{
